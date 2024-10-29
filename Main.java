@@ -57,6 +57,7 @@ public class Main
 
     //Problem 6
     System.out.println("Please enter a letter grade:");
+    sc.nextLine();
     String letter = sc.nextLine();
     if (letter.equals("A"))
     {
@@ -66,7 +67,7 @@ public class Main
     {
       System.out.println("80-90");
     }
-    if (letter.equals("C"))
+    else if (letter.equals("C"))
     {
       System.out.println("70-80");
     }
@@ -74,6 +75,40 @@ public class Main
     {
       System.out.println("60-70");
     }
-    
+    else if (letter.equals("F"))
+    {
+      System.out.println("0-60");
+    }
+    else 
+    {
+      System.out.println("Invalid Letter Grade");
+    }
+
+    // Problem 7
+    int firstNum = (int)(51 * Math.random());
+    int secNum = (int)(Math.random()*50) + 51;
+    int sum = firstNum + secNum;
+    System.out.println(firstNum + " + " + secNum + " = ?");
+    int userSum = sc.nextInt();
+    if (sum == userSum)
+    {
+      System.out.println("Correct!");
+    }
+    else
+    {
+      System.out.println("Wrong");
+    }
+
+    //Problem 8
+    System.out.println("What is the temperature?");
+    int temp = sc.nextInt();
+    if (temp >= 97 && temp<=99)
+    {
+      System.out.println("Temperature is OK");
+    }
+    else
+    {
+      System.out.println("NOT NORMAL");
+    }
   }
 }
